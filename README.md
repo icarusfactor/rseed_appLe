@@ -6,5 +6,5 @@ This app gathers RSS feed data from selected site and prioritizes sites has no p
 
 > This plugin uses the Wordpress cron
 > abilitiy and needs to be externally activated.
-> Server cron job or remote cron is activate by acceing the site.
+> Server cron job or remote cron is activated by accessing any page of the site.
 > If its time to update it will proceed to update the RSS caches.
