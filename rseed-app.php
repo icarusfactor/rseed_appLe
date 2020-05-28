@@ -8,7 +8,7 @@
  Plugin Name: RSS RAW Seed Feed App
  Plugin URI: http://userspace.org
  Description: This app gathers RSS feed data from selected site and prioritizes sites has no presentation , just update cache and requires the AppLepie project plugin.
- Version: 0.7.0
+ Version: 0.7.1
  Author: Daniel Yount IcarusFactor
  Author URI: http://userspace.org
  License: GPLv2 or later
@@ -29,7 +29,7 @@
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 defined('ABSPATH')or die('Hey, what are you doing here? You silly human!');
-if(!class_exists('rseedfeedAppLe')&& class_exists('AppLePiePlugin')) {
+if(!class_exists('rseedfeedAppLe')&& class_exists('AppLePiePlugin')&& class_exist('RAWseed') ) {
 
     class rseedfeedAppLe {
         public $plugin;
@@ -138,8 +138,6 @@ if(!class_exists('rseedfeedAppLe')&& class_exists('AppLePiePlugin')) {
     // deactivation
     require_once plugin_dir_path(__FILE__). 'inc/feed-app-deactivate.php';
     register_deactivation_hook(__FILE__, array('rseedfeedAppDeactivate', 'deactivate'));
-    // Rseed rss ctrl class
-    require_once plugin_dir_path(__FILE__). 'inc/class.rseed.php';
     //Use hooks from parent plugin.  
     add_shortcode('rseedApp', array($rseedfeedApp, 'start_up'));
 }
