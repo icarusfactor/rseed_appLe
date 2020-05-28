@@ -29,7 +29,7 @@
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 defined('ABSPATH')or die('Hey, what are you doing here? You silly human!');
-if(!class_exists('rseedfeedAppLe')&& class_exists('AppLePiePlugin')&& class_exist('RAWseed') ) {
+if(!class_exists('rseedfeedAppLe')&& class_exists('AppLePiePlugin')&& class_exists('RAWseed') ) {
 
     class rseedfeedAppLe {
         public $plugin;
